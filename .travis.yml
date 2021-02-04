@@ -4,7 +4,7 @@ arch:
 
 script:
   #- sudo pkg install -r FreeBSD shells/bash devel/cmake devel/ninja devel/ccache lang/mono lang/python3 devel/boost-libs devel/libeio security/openssl
-  - mkdir .build && cd .build
+  - mkdir build && cd build
   - cmake -G Ninja - DUSE_CCACHE=on DDISABLE_TLS=off DUSE_DTRACE=off 
   - ..ninja -j 10
   # run fast tests
